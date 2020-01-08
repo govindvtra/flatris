@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'Suni'
-    }
-
-  }
+  agent none
   stages {
     stage('build') {
       agent {
@@ -18,6 +13,12 @@ pipeline {
       }
     }
     stage('test') {
+      agent {
+        node {
+          label 'Suni'
+        }
+
+      }
       steps {
         echo 'testing'
       }
