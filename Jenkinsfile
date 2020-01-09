@@ -1,26 +1,21 @@
 pipeline {
-  agent none
+  agent any
   stages {
-    stage('build') {
-      agent {
-        node {
-          label 'Suni'
-        }
-
-      }
+    stage('Fluffy Build') {
       steps {
-        echo 'hello world'
+        echo 'Placeholder'
+        sh 'echo Edited Placeholder.'
       }
     }
-    stage('test') {
-      agent {
-        node {
-          label 'Suni'
-        }
-
-      }
+    stage('Fluffy Test') {
       steps {
-        echo 'testing'
+        sh 'sleep 5'
+        sh 'echo Success!'
+      }
+    }
+    stage('Fluffy Deploy') {
+      steps {
+        echo 'Placeholder'
       }
     }
   }
